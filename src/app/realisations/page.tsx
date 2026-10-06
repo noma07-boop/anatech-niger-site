@@ -7,7 +7,7 @@ import { services } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Réalisations",
   description:
-    "Les domaines d'intervention d'ANATECH NIGER : développement, réseaux, sécurité, design et impression.",
+    "Les domaines d'intervention d'ANATECH NIGER : développement, réseaux, sécurité, design, impression et énergie solaire.",
 };
 
 export default function RealisationsPage() {
@@ -33,7 +33,15 @@ export default function RealisationsPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
-            <Reveal key={service.slug} delay={(i % 3) * 0.1}>
+            <Reveal
+              key={service.slug}
+              delay={(i % 3) * 0.1}
+              className={
+                i === services.length - 1 && services.length % 3 === 1
+                  ? "lg:col-start-2"
+                  : undefined
+              }
+            >
               <div className="group rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 transition-colors hover:border-brand-orange/40 hover:bg-white">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-blue shadow-sm transition-transform group-hover:scale-110">
                   <Icon name={service.icon} />

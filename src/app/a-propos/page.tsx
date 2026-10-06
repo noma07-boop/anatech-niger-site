@@ -5,7 +5,7 @@ import { company, services, values } from "@/lib/data";
 export const metadata: Metadata = {
   title: "À propos",
   description:
-    "ANATECH NIGER est une entreprise technologique basée à Niamey, spécialisée en développement, réseaux, sécurité, design et impression.",
+    "ANATECH NIGER est une entreprise technologique basée à Niamey, spécialisée en développement, réseaux, sécurité, design, impression et énergie solaire.",
 };
 
 export default function AboutPage() {
@@ -34,8 +34,8 @@ export default function AboutPage() {
                 institutions et particuliers dans leurs projets technologiques. Notre
                 équipe locale réunit des compétences en développement web & mobile,
                 solutions informatiques, infographie & design, réseaux & cloud,
-                sécurité & vidéosurveillance ainsi qu&apos;impression & supports de
-                communication.
+                sécurité & vidéosurveillance, impression & supports de communication
+                ainsi qu&apos;en énergie solaire et électricité.
               </p>
               <p className="mt-4 text-base leading-7 text-slate-600">
                 Cette diversité d&apos;expertises nous permet de suivre un projet dans

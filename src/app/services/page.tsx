@@ -8,7 +8,7 @@ import { company, services } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Découvrez les expertises d'ANATECH NIGER : développement web & mobile, solutions informatiques, infographie & design, réseaux & cloud, sécurité & vidéosurveillance, impression & supports.",
+    "Découvrez les expertises d'ANATECH NIGER : développement web & mobile, solutions informatiques, infographie & design, réseaux & cloud, sécurité & vidéosurveillance, impression & supports, énergie & solaire.",
 };
 
 export default function ServicesPage() {
@@ -24,7 +24,7 @@ export default function ServicesPage() {
               Des solutions complètes pour votre transformation technologique
             </h1>
             <p className="mt-4 max-w-2xl text-blue-100">
-              {company.name} réunit six domaines d&apos;expertise pour accompagner vos
+              {company.name} réunit sept domaines d&apos;expertise pour accompagner vos
               projets, de la conception numérique à la sécurisation de vos locaux.
             </p>
           </Reveal>

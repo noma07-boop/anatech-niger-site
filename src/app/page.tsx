@@ -69,14 +69,22 @@ export default function Home() {
               Nos expertises
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-              Une équipe, six domaines d&apos;expertise
+              Une équipe, sept domaines d&apos;expertise
             </p>
           </div>
         </Reveal>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
-            <Reveal key={service.slug} delay={(i % 3) * 0.1}>
+            <Reveal
+              key={service.slug}
+              delay={(i % 3) * 0.1}
+              className={
+                i === services.length - 1 && services.length % 3 === 1
+                  ? "lg:col-start-2"
+                  : undefined
+              }
+            >
               <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
                 <ClickableImage
                   src={`/brand/services/${service.slug}-flat.jpg`}

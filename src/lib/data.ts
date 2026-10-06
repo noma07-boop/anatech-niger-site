@@ -28,7 +28,8 @@ export type IconName =
   | "palette"
   | "cloud"
   | "shield"
-  | "printer";
+  | "printer"
+  | "sun";
 
 export const services: Service[] = [
   {
@@ -84,6 +85,20 @@ export const services: Service[] = [
     description:
       "Impression de cartes de visite, flyers, bâches publicitaires et objets personnalisés pour accompagner votre communication sur le terrain, du concept à l'objet fini.",
     icon: "printer",
+  },
+  {
+    slug: "energie-solaire",
+    title: "Énergie & Solaire",
+    short: "Électricité, panneaux solaires, forages solaires",
+    bullets: [
+      "Installation électrique",
+      "Panneaux solaires",
+      "Forages solaires",
+      "Maintenance",
+    ],
+    description:
+      "Installation électrique et systèmes photovoltaïques pour alimenter vos locaux et vos équipements de façon fiable et économique. Nous intervenons également sur les forages fonctionnant à l'énergie solaire (pompage solaire), pour un accès à l'eau autonome, sans dépendre du réseau électrique.",
+    icon: "sun",
   },
 ];
 

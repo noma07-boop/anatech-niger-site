@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | ANATECH NIGER",
   },
   description:
-    "ANATECH NIGER : développement web & mobile, solutions informatiques, infographie & design, réseaux & cloud, sécurité & vidéosurveillance, impression & supports. Basé à Lazaret, Niamey.",
+    "ANATECH NIGER : développement web & mobile, solutions informatiques, infographie & design, réseaux & cloud, sécurité & vidéosurveillance, impression & supports, énergie & solaire. Basé à Lazaret, Niamey.",
 };
 
 export const viewport: Viewport = {
