@@ -5,6 +5,8 @@ export function proxy(request: NextRequest) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
 
   const isDev = process.env.NODE_ENV === "development";
+  // ALLOW_HTTP=true : test en HTTP simple (adresse IP sans certificat). Ne jamais l'activer en production avec HTTPS.
+  const allowHttp = process.env.ALLOW_HTTP === "true";
 
   const cspHeader = `
     default-src 'self';
@@ -18,7 +20,7 @@ export function proxy(request: NextRequest) {
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
-    upgrade-insecure-requests;
+    ${allowHttp ? "" : "upgrade-insecure-requests;"}
   `
     .replace(/\s{2,}/g, " ")
     .trim();
@@ -39,10 +41,12 @@ export function proxy(request: NextRequest) {
     "Permissions-Policy",
     "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
   );
-  response.headers.set(
-    "Strict-Transport-Security",
-    "max-age=63072000; includeSubDomains; preload"
-  );
+  if (!allowHttp) {
+    response.headers.set(
+      "Strict-Transport-Security",
+      "max-age=63072000; includeSubDomains; preload"
+    );
+  }
 
   return response;
 }
